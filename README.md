@@ -3,7 +3,7 @@
 [![PyPI version](https://img.shields.io/pypi/v/synthetic-face-masks.svg)](https://pypi.org/project/synthetic-face-masks/)
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Build Status](https://github.com/AmadeusITGroup/synthetic-face-masks/actions/workflows/release-pypi.yml/badge.svg)](https://github.com/AmadeusITGroup/synthetic-face-masks/actions)
+[![Build Status](https://github.com/AmadeusITGroup/synthetic-face-masks/actions/workflows/release-pypi.yml/badge.svg?branch=main)](https://github.com/AmadeusITGroup/synthetic-face-masks/actions)
 
 A Python library for generating synthetic face datasets with facial region masks between different face images. This tool is designed for creating training datasets for computer vision and machine learning applications.
 

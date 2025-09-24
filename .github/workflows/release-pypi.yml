@@ -5,15 +5,10 @@ name: Publish Python 🐍 distribution
 # Trigger the workflow on push events to tags starting with 'v' and 'main' branch.
 on:
   push:
-    tags:
-    - v*
-    branches:
-    - main
-    # Uncomment the below section to enable testing package builds on pull
-    # requests to 'main'.
-    # pull_request:
-    #   branches:
-    #   - main
+    branches: [ main ]
+    tags: [ v* ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   # Job to build the Python distribution.
