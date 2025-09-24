@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Packaging
+build/
+dist/
+
+# Virtual environments
+venv/
+.venv/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# Testing
+.pytest_cache/
+.coverage
+
+# OS files
+.DS_Store
+
+# Project outputs
+*output_*
+test_output/
+*output_face_masks*
+
+# Local development
+local_config.py
+*_version.py
