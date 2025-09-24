@@ -1,6 +1,6 @@
 # This workflow automates the build, testing, and publication of a Python
 # distribution to PyPI and TestPyPI.
-name: Build and Publish
+name: Publish Python 🐍 distribution
 
 # Trigger the workflow on push events to tags starting with 'v' and 'main' branch.
 on:
@@ -71,29 +71,3 @@ jobs:
         path: dist/
     - name: Publish distribution 📦 to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
-
-
-
-  # Job to publish the distribution to TestPyPI on pushes to the 'main' branch.
-  publish-to-testpypi:
-    name: Publish Python 🐍 distribution 📦 to TestPyPI
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    needs: [build]
-    runs-on: ubuntu-latest
-    environment:
-      name: testpypi
-      url: https://test.pypi.org/p/${{ needs.build.outputs.package_name }}
-    permissions:
-      id-token: write  # Required for trusted publishing
-    steps:
-    - name: Download all the dists
-      uses: actions/download-artifact@v5
-      with:
-        name: python-package-distributions
-        path: dist/
-    - name: Publish distribution 📦 to TestPyPI
-      uses: pypa/gh-action-pypi-publish@release/v1
-      with:
-        repository-url: https://test.pypi.org/legacy/
-        skip-existing: true
-        verbose: true
