@@ -364,26 +364,11 @@ git push origin v1.0.1
    - Run tests
    - Publish to PyPI (for version tags)
    - Create a GitHub release with signed artifacts
-   - Publish to TestPyPI (for main branch pushes)
 
-### Manual Publication
-
-For manual publication (if needed):
-
-1. **TestPyPI** (for testing):
-```bash
-python -m twine upload --repository testpypi dist/*
-```
-
-2. **PyPI** (for production):
-```bash
-python -m twine upload dist/*
-```
 
 ### GitHub Environments
 
 The workflow uses GitHub environments for secure publishing:
-- `testpypi`: For TestPyPI publications
 - `pypi`: For PyPI publications
 
 Make sure these environments are configured in your GitHub repository settings with appropriate secrets or trusted publishing.
@@ -395,8 +380,6 @@ Once published, users can install the package:
 # From PyPI
 pip install synthetic-face-masks
 
-# From TestPyPI (for testing)
-pip install -i https://test.pypi.org/simple/ synthetic-face-masks
 ```
 
 ## License
